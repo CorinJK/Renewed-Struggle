@@ -1,4 +1,4 @@
-﻿using Scripts.CameraLogic;
+﻿using Scripts.Services.Camera;
 using Scripts.Services.Input;
 using UnityEngine;
 using Zenject;
@@ -10,15 +10,10 @@ namespace Scripts.Player
     {
         [SerializeField] private float _movementSpeed = 0.5f;
         [SerializeField] private CharacterController _characterController;
-        private InputService _inputService;
+        
+        [Inject] private IInputService _inputService;
         
         private Camera _camera;
-
-        [Inject]
-        private void Construct(InputService inputService)
-        {
-            _inputService = inputService;
-        }
 
         private void Start()
         {
