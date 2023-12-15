@@ -6,7 +6,7 @@ namespace Scripts.Infrastructure.StateMachine
 {
     public class LoadLevelState : IState
     {
-        private const string BattlefieldScene = "Battlefield";
+        private const string BattlefieldScene = "Battle";
         
         private GameStateMachine _gameStateMachine;
         private ISceneLoaderService _sceneLoaderService;

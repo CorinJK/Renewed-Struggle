@@ -6,11 +6,12 @@ using Zenject;
 
 namespace Scripts.Services.Factory
 {
-    public class StateFactory : IStatesFactory
+    public class StatesFactory : IStatesFactory
     {
         private readonly DiContainer _container;
 
-        public StateFactory(DiContainer diContainer)
+        [Inject]
+        public StatesFactory(DiContainer diContainer)
         {
             _container = diContainer;
         }

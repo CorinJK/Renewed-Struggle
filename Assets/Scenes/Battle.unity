@@ -259,10 +259,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 939401073}
-  - component: {fileID: 939401075}
   - component: {fileID: 939401074}
   m_Layer: 0
-  m_Name: ServicesInstaller
+  m_Name: BattleInstaller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -276,12 +275,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 939401072}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1824710184}
+  m_Father: {fileID: 1843203168}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &939401074
 MonoBehaviour:
@@ -292,23 +291,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 939401072}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5186a1a9c4ad50541b14c255a3222a57, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f4a0b0c6780479296d242850281a70c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &939401075
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 939401072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35669827afdcab649b1357413a9426dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _coroutineRunner: {fileID: 939401074}
-  _playerMovement: {fileID: 6522881722864156606}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -414,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c44490fd122e5f845a757250059e5c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rotationAngleX: 85
+  _rotationAngleX: 80
   _distance: 0
   _offsetY: 10
   _following: {fileID: 0}
@@ -542,38 +527,6 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
---- !u!1 &1824710183
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1824710184}
-  m_Layer: 0
-  m_Name: Installers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1824710184
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1824710183}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 939401073}
-  m_Father: {fileID: 1843203168}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1843203166
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,7 +558,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scriptableObjectInstallers: []
   _monoInstallers:
-  - {fileID: 939401075}
+  - {fileID: 939401074}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -636,7 +589,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1824710184}
+  - {fileID: 939401073}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &6034171534236267932
@@ -793,17 +746,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b13fbeaebf7161e4eb155bd03fafd922, type: 3}
---- !u!114 &6522881722864156606 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1389874934500947452, guid: b13fbeaebf7161e4eb155bd03fafd922, type: 3}
-  m_PrefabInstance: {fileID: 6522881722864156605}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bebd7e72e2402b4aba3b7f40a7c2f6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

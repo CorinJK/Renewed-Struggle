@@ -17,6 +17,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3b24cc7fa9794ed8ab04312c53e6dedd172c00/f4/dd4d1d9d/Coroutine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Rogue Knight/Assets/CodeBase/Infrastructure/States/IGameStateMachine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Rogue Knight/Assets/CodeBase/Services/Input/IInputService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Split/Assets/Scripts/Infrastructure/GameBootstrapperFolder/GameBootstrapper.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -97,6 +98,9 @@
       <workItem from="1702072102153" duration="3326000" />
       <workItem from="1702076254363" duration="1879000" />
       <workItem from="1702080988860" duration="312000" />
+      <workItem from="1702310369731" duration="2017000" />
+      <workItem from="1702410764249" duration="3279000" />
+      <workItem from="1702656517865" duration="3000000" />
     </task>
     <servers />
   </component>
