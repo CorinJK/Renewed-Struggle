@@ -22,6 +22,7 @@
     <setting file="file://$USER_HOME$/Desktop/Scripts/Services/Factory/IPrefabFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Desktop/Scripts/Services/Factory/PrefabFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../FlyingSphere/Assets/CodeBase/Infrastructure/Installers/BootstrapInstaller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Rise to Fame/Assets/Scripts/Infrastructure/States/LoadLevelState.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Rogue Knight/Assets/CodeBase/Infrastructure/States/IGameStateMachine.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Rogue Knight/Assets/CodeBase/Services/Input/IInputService.cs" root0="SKIP_HIGHLIGHTING" />
@@ -109,7 +110,7 @@
       <workItem from="1702310369731" duration="2017000" />
       <workItem from="1702410764249" duration="3279000" />
       <workItem from="1702656517865" duration="7415000" />
-      <workItem from="1702740888526" duration="2573000" />
+      <workItem from="1702740888526" duration="7251000" />
     </task>
     <servers />
   </component>
