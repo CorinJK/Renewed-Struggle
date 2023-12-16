@@ -17,24 +17,29 @@ namespace Scripts.Infrastructure.StateMachine
         private ISceneLoaderService _sceneLoaderService;
         private IPrefabFactory _prefabFactory;
         private IInputService _inputService;
+        private ILoadingScreen _loadingScreen;
 
         [Inject]
-        public void Construct(GameStateMachine gameStateMachine, ISceneLoaderService sceneLoaderService, IPrefabFactory prefabFactory, IInputService inputService)
+        public void Construct(GameStateMachine gameStateMachine, ISceneLoaderService sceneLoaderService, 
+            IPrefabFactory prefabFactory, IInputService inputService, ILoadingScreen loadingScreen)
         {
             _gameStateMachine = gameStateMachine;
             _sceneLoaderService = sceneLoaderService;
             _prefabFactory = prefabFactory;
             _inputService = inputService;
+            _loadingScreen = loadingScreen;
         }
 
         public void Enter()
         {
             Debug.Log("Enter LoadLevelState");
+            _loadingScreen.Show();
             _sceneLoaderService.Load(BattlefieldScene, OnLoaded);
         }
 
         public void Exit()
         {
+            _loadingScreen.Hide();
         }
 
         private void OnLoaded()

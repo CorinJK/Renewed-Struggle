@@ -75,3 +75,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coroutineRunnerPrefab: {fileID: 5667615169312031140, guid: 56bc1304bc0385241a084732cc68e60a, type: 3}
+  _loadingScreenPrebab: {fileID: 5177821687549870742, guid: 9fc4cef832d90ef4784231f1867e3182, type: 3}

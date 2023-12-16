@@ -13,6 +13,7 @@ namespace Scripts.Infrastructure.Installers
     {
         [Header("References")]
         [SerializeField] private GameObject _coroutineRunnerPrefab;
+        [SerializeField] private GameObject _loadingScreenPrebab;
 
         public override void InstallBindings()
         {
@@ -41,6 +42,7 @@ namespace Scripts.Infrastructure.Installers
         private void BindSceneLoader()
         {
             Container.Bind<ICoroutineRunner>().To<CoroutineRunner>().FromComponentInNewPrefab(_coroutineRunnerPrefab).AsSingle();
+            Container.Bind<ILoadingScreen>().To<LoadingScreen>().FromComponentInNewPrefab(_loadingScreenPrebab).AsSingle();
             Container.Bind<ISceneLoaderService>().To<SceneLoaderService>().AsSingle();
         }
 
