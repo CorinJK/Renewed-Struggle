@@ -1,7 +1,5 @@
-﻿using Scripts.Services.Camera;
-using Scripts.Services.Input;
+﻿using Scripts.Services.Input;
 using UnityEngine;
-using Zenject;
 
 namespace Scripts.Player
 {
@@ -11,23 +9,27 @@ namespace Scripts.Player
         [SerializeField] private float _movementSpeed = 0.5f;
         [SerializeField] private CharacterController _characterController;
         
-        [Inject] private IInputService _inputService;
-        
+        private IInputService _inputService;
         private Camera _camera;
 
-        private void Start()
+        public void Init(IInputService inputService)
         {
+            _inputService = inputService;
             _camera = Camera.main;
-            CameraFollow();
         }
-        
+
         private void Update()
         {
+            if (_inputService == null)
+            {
+                return;
+            }
+            
             Vector3 movementVector = Vector3.zero;
 
             if (_inputService.Axis.sqrMagnitude > Constants.Epsilon)
             {
-                movementVector = Camera.main.transform.TransformDirection(_inputService.Axis);
+                movementVector = _camera.transform.TransformDirection(_inputService.Axis);
                 movementVector.y = 0;
                 movementVector.Normalize();
 
@@ -37,8 +39,5 @@ namespace Scripts.Player
             movementVector += Physics.gravity;
             _characterController.Move(_movementSpeed * movementVector * Time.deltaTime);
         }
-        
-        private void CameraFollow () => 
-            _camera.GetComponent<CameraFollow>().Follow(gameObject);
     }
 }

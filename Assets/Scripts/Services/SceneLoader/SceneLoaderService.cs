@@ -11,7 +11,7 @@ namespace Scripts.Services.SceneLoader
         private ICoroutineRunner _coroutineRunner;
         
         [Inject]
-        public void Constructor(ICoroutineRunner coroutineRunner)
+        public SceneLoaderService(ICoroutineRunner coroutineRunner)
         {
             _coroutineRunner = coroutineRunner;
         }

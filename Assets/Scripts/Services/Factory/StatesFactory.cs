@@ -22,6 +22,7 @@ namespace Scripts.Services.Factory
             {
                 { typeof(BootstrapState), BindState(new BootstrapState()) },
                 { typeof(LoadLevelState), BindState(new LoadLevelState()) },
+                { typeof(GameLoopState), BindState(new GameLoopState()) },
             };
         }
 

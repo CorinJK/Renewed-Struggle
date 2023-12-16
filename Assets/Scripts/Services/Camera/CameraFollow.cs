@@ -21,8 +21,8 @@ namespace Scripts.Services.Camera
             transform.position = position;
         }
 
-        public void Follow(GameObject following) =>
-            _following = following.transform;
+        public void Follow(Transform following) =>
+            _following = following;
         
         private Vector3 FollowingPointPosition()
         {

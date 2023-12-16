@@ -1,5 +1,7 @@
 ﻿using Scripts.Infrastructure.StateMachine;
+using Scripts.Services.AssetManagement;
 using Scripts.Services.Factory;
+using Scripts.Services.Input;
 using Scripts.Services.SceneLoader;
 using Scripts.Tools;
 using UnityEngine;
@@ -14,10 +16,19 @@ namespace Scripts.Infrastructure.Installers
 
         public override void InstallBindings()
         {
-            BindMonoServices();
+            BindInputService();
             BindSceneLoader();
+            BindServices();
             BindGameStateMachine();
             MakeInitializable();
+        }
+
+        private void BindInputService()
+        {
+            if (Application.isEditor)
+                Container.BindInterfacesTo<KeyboardInputService>().AsSingle().NonLazy();
+            else
+                Container.BindInterfacesTo<MobileInputService>().AsSingle().NonLazy();
         }
 
         public void Initialize()
@@ -27,14 +38,16 @@ namespace Scripts.Infrastructure.Installers
                 .Enter<BootstrapState>();
         }
 
-        private void BindMonoServices()
-        {
-            Container.Bind<ICoroutineRunner>().To<CoroutineRunner>().FromComponentInNewPrefab(_coroutineRunnerPrefab).AsSingle();
-        }
-
         private void BindSceneLoader()
         {
+            Container.Bind<ICoroutineRunner>().To<CoroutineRunner>().FromComponentInNewPrefab(_coroutineRunnerPrefab).AsSingle();
             Container.Bind<ISceneLoaderService>().To<SceneLoaderService>().AsSingle();
+        }
+
+        private void BindServices()
+        {
+            Container.Bind<IAssetProvider>().To<AssetProvider>().AsSingle();
+            Container.Bind<IPrefabFactory>().To<PrefabFactory>().AsSingle();
         }
 
         private void BindGameStateMachine()
